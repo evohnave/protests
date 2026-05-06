@@ -150,7 +150,7 @@ def main():
                 pg = context.new_page()
                 pg.goto(
                     SEARCH_URL.format(page=page),
-                    wait_until="networkidle",
+                    wait_until="domcontentloaded",
                     timeout=60000,
                 )
                 html = pg.content()
